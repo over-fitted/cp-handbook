@@ -1,10 +1,10 @@
 # cp-handbook
 notes taken from the CP handbook https://cses.fi/book/book.pdf
 
-## Binary Search
+# Binary Search
 Only works with sorted lists
 
-# method 1
+### method 1
 Find middle, then reduce the search field to either everything above or below, then repeat
 The focus is on changing the seach field with the middle being calculated each time
 ```cpp
@@ -18,7 +18,7 @@ while (a <= b) {
 ```
 O(logn)
 
-# method 2
+### method 2
 1) jump from start to middle of array, then halve the jump size
 2) if current value > target, jump from start again, else change start location to here and jump again
 3) repeat till jump size = 0 (not in array) or found
