@@ -44,7 +44,7 @@ if (array[k] == x) {// x found at index k}
 6) cleanup - remove current element with current_subset.pop_back(), then resolve the current recursive call
 ``` C++
 void search(int inputArr[], int k) {
-  if (k == inputArr.size()) {
+  if (k == sizeof(inputArr)) {
     // process subset, starting with empty subset with all indexes in case 1
   } else {
     search(k+1); // Case 1: continue to next index without current index value
