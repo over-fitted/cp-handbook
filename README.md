@@ -43,5 +43,14 @@ if (array[k] == x) {// x found at index k}
   a) second iteration should only have the last element pushed into the subset, with all the previous indexes choosing to ignore their elements
 6) cleanup - remove current element with current_subset.pop_back(), then resolve the current recursive call
 ``` C++
-void search(int k) {if (k == n) {// process subset} else {search(k+1);subset.push_back(k);search(k+1);subset.pop_back();}}
-                 ```
+void search(int k) {
+  if (k == n) {
+    // process subset
+  } else {
+    search(k+1);
+    subset.push_back(k);
+    search(k+1);
+    subset.pop_back();
+  }
+}
+```
